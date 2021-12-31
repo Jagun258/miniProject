@@ -125,7 +125,7 @@
                 <div class="row ">
                     <div class="col-md-6">
                         <button type="register"  class="button1 fs-4" id="register_btn"><a
-                                href="hw_minipro_register.html" >สมัครสมาชิก</a></button>
+                                href="register.php" >สมัครสมาชิก</a></button>
                     </div>
                     <div class="col-md-6">
                         <input type="submit" value="Login" class="button1 fs-4" id="login_btn" onClick="check()" />
