@@ -63,7 +63,7 @@
 
     <div class="container bg-info bg-opacity-25 text-center my-5 " style='border-radius: 25px;'>
 
-        <form action="hw_minipro_login.html" novalidate>
+        <form action="index.php" novalidate>
             <div class="row">
                 <div class="fs-2 text-start fw-bolder ps-5 pt-3">
                     สมัครสมาชิก
@@ -112,7 +112,7 @@
 
             <input type="submit" class="btn btn-success fw-bolder" style='color:white' id='submit'
                 value='ยืนยันการสมัคร'>
-            <button type="cancel" class="btn btn-danger" id='cancel'><a href="hw_minipro_login.html" class='fw-bolder'
+            <button type="cancel" class="btn btn-danger" id='cancel'><a href="index.php" class='fw-bolder'
                     style="color:white">ยกเลิกการสมัคร</a></button>
         </form>
     </div>
