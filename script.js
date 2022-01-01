@@ -62,7 +62,7 @@ function check() {
             if (user == ary[item]['username']) {
                 if (password == ary[item]['password']) {
                     alert('correct')
-                    location.href='https://wubook-menu.herokuapp.com/';
+                    window.location.href='https://wubook-menu.herokuapp.com'
                     return false
                 }
             }
