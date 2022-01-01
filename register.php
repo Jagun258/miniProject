@@ -15,19 +15,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
     <title>WUBOOK</title>
 </head>
 
 <style>
-    * {
-        font-family: 'Kanit', sans-serif;
-    }
-
-    .row {
-        padding-bottom: 15px;
-    }
-
     .btn {
         margin: 20px 0px;
         border-radius: 188px;
@@ -38,13 +32,8 @@
         box-shadow: inset 0px 7px 0px rgba(0, 0, 0, 0.25);
     }
 
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    a:hover {
-        color: black;
+    textarea {
+        resize: none;
     }
 </style>
 
@@ -63,7 +52,7 @@
 
     <div class="container bg-info bg-opacity-25 text-center my-5 " style='border-radius: 25px;'>
 
-        <form action="index.php" novalidate>
+        <form action="index.html" method="post">
             <div class="row">
                 <div class="fs-2 text-start fw-bolder ps-5 pt-3">
                     สมัครสมาชิก
@@ -88,7 +77,7 @@
                     <input type="password" class="form-control ms-5" id="password_customer" onchange="check_password()"
                         maxlength="100" required>
                     <div class='text-danger warning text-start ps-5' id='password_customer_warning'>
-                        *กรุณาระบุ Password
+                        *กรุณาระบุ Password (a-z, 0-9, ไม่มีอักษรพิเศษ)
                     </div>
                 </div>
                 <div class="col-4"></div>
@@ -104,23 +93,91 @@
                         *กรุณาระบุ Password
                     </div>
                     <div class='text-danger warning text-start ps-5' id='notmatch'>
-                        Password ไม่ตรงกัน
+                        *Password ไม่ตรงกัน
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <label for="email_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Email
+                    *</label>
+                <div class="col">
+                    <input type="email" class="form-control ms-5" id="email_customer" onchange="check_email()"
+                        maxlength="100" required>
+                    <div class='text-danger warning text-start ps-5' id='email_customer_warning'>
+                        *กรุณาระบุ Email
+                    </div>
+                    <div class='text-danger warning text-start ps-5' id='email_not_correct'>
+                        *Email ไม่ถูกต้อง
                     </div>
                 </div>
                 <div class="col-4"></div>
             </div>
 
-            <input type="submit" class="btn btn-success fw-bolder" style='color:white' id='submit'
-                value='ยืนยันการสมัคร'>
-            <button type="cancel" class="btn btn-danger" id='cancel'><a href="index.php" class='fw-bolder'
+            <div class="row">
+                <label for="name_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ชื่อ-นามสกุล
+                    *</label>
+                <div class="col">
+                    <input type="text" class="form-control ms-5" id="name_customer" onchange="check_name()"
+                        maxlength="100" required>
+                    <div class='text-danger warning text-start ps-5' id='name_customer_warning'>
+                        *กรุณาระบุชื่อ-นามสกุล
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            <div class="row">
+                <label for="phone_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เบอร์โทร
+                    *</label>
+                <div class="col">
+                    <input type="tel" class="form-control ms-5" id="phone_customer" onchange="check_phone()"
+                        maxlength="10" required>
+                    <div class='text-danger warning text-start ps-5' id='phone_customer_warning'>
+                        *กรุณาระบุเบอร์โทรศัพท์
+                    </div>
+                    <div class='text-danger warning text-start ps-5' id='phone_customer_not_correct'>
+                        *เบอร์โทรศัพท์ไม่ถูกต้อง
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            <div class="row">
+                <label for="address_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ที่อยู่
+                    *</label>
+                <div class="col">
+                    <textarea type="tel" class="form-control ms-5" id="address_customer"
+                        onchange="check_now('address_customer')" required></textarea>
+                    <div class='text-danger warning text-start ps-5' id='address_customer_warning'>
+                        *กรุณาระบุที่อยู่
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            <div class="row">
+                <label for="address_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เพศ
+                    *</label>
+                <div class="col pt-1">
+                    <input class="form-check-input mt-2" type="radio" id="man" name='gender_customer' value="man" required><span
+                        class="fs-5 me-5">ชาย</span>
+                    <input class="form-check-input mt-2" type="radio" id="woman" name='gender_customer'
+                        value="woman" required><span class='fs-5'>หญิง</span>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            <button type="cancel" class="btn btn-danger" id='cancel'><a href="index.html" class='fw-bolder'
                     style="color:white">ยกเลิกการสมัคร</a></button>
+            <input type="submit" class="btn btn-success fw-bolder" style='color:white' id='confirm_btn'
+                value='ยืนยันการสมัคร'>
         </form>
     </div>
 
     <footer>
         <div class="bg-info bg-opacity-50" style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
-            height: 140px;">
-            >
+            height: 100px;">
         </div>
     </footer>
 
@@ -128,24 +185,35 @@
 </body>
 
 <script>
+
+
+
     check_password = () => {
         var pass = $('#password_customer').val()
         var cfpass = $('#cf_password_customer').val()
-        if(cfpass.length!=0){
-            if(pass!=cfpass){
+        if (cfpass.length != 0) {
+            if (pass != cfpass) {
                 $('#notmatch').show()
             }
-            else{
+            else {
                 $('#notmatch').hide()
             }
-        }else{
-            if(pass.length==0){
+        } else {
+            if (pass.length == 0) {
                 $('#password_customer_warning').show()
-            }else{
-                $('#password_customer_warning').show()
+            } else {
+                $('#password_customer_warning').hide()
             }
         }
+        if (!(pass.match(/^[A-Za-z0-9]+$/))) {
+            $('#password_customer_warning').show()
+        } else {
+            $('#password_customer_warning').hide()
+        }
+
     }
+
+
     check_now = (thisId) => {
         if (((($('#' + thisId).val()).length) == 0) || (($('#' + thisId).val()).length) < 6) {
 
@@ -160,11 +228,52 @@
             $('#' + thisId).attr('class', 'form-control ms-5 border-success');
         }
     }
+
+    check_name = () => {
+        if ((($('#name_customer').val()).length) == 0) {
+
+            $('#name_customer_warning').show();
+            $('#name_customer').attr('class', 'form-control ms-5 border-danger');
+
+        } else {
+            $('#name_customer_warning').hide();
+            $('#name_customer').attr('class', 'form-control ms-5 border-success');
+        }
+    }
+
+    // .match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
+    check_email = () => {
+        var email = $('#email_customer').val()
+        if (!(email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/))) {
+            $('#email_not_correct').show()
+        } else {
+            $('#email_not_correct').hide()
+        }
+    }
+
+    check_phone = () => {
+        var phone = $('#phone_customer').val();
+        if (phone.length != 10) {
+            if (!(phone.match(/[0-9]{10}/))) {
+                $('#phone_customer_not_correct').show()
+                $('#phone_customer_warning').hide()
+            }
+            else {
+                $('#phone_customer_warning').show()
+                $('#phone_customer_not_correct').hide()
+            }
+        } else if (!(phone.match(/[0-9]{10}/))) {
+            $('#phone_customer_not_correct').show()
+            $('#phone_customer_warning').hide()
+        }
+        else {
+            $('#phone_customer_not_correct').hide()
+            $('#phone_customer_warning').hide()
+        }
+    }
+
     $(() => {
-        // $('#submit').prop('disabled', true);
-        // $('#submit').prop('disabled', false);
         $('.warning').hide();
-        $('#submit').prop('disabled', true);
     })
 </script>
 
