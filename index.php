@@ -121,8 +121,7 @@
 
                 <div class="row my-x-3 ">
                     <div class="col-xl-4 col-sm-5 col-4 d-grid gap-2 mx-auto my-3 ">
-                        <button type="register" class="button1 fs-4" id="register_btn"><a
-                                href="register.php">สมัครสมาชิก</a></button>
+                        <button type="register" class="button1 fs-4" id="register_btn" onclick="window.location.href='register.php'">สมัครสมาชิก</button>
                     </div>
                     <div class="col-xl-4 col-sm-5 col-4 d-grid gap-2 mx-auto my-3">
                         <button type="button" class="button1 fs-4" id="login_btn" onClick="check()">Login</button>
