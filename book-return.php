@@ -45,7 +45,7 @@
                                 <b>รหัสสมาชิก:</b>
                             </label>
                             <div class="col-lg">
-                                <input type="number" class="form-control" id="id_customer" maxlength="20" required>
+                                <input type="number" class="form-control" id="id_customer" maxlength="20" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
                             </div>
                         </div>
                         <div class="row">
