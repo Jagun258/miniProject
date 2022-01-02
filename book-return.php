@@ -29,8 +29,6 @@
                 WU BOOK
             </span>
         </a>
-        <img src="https://i.pinimg.com/736x/8b/08/ed/8b08ed0cb7a60f9372a160fcbacb47b1.jpg" alt="profile" style="width: 80px;
-            height: 80px;">
     </nav>
 
     <!--  -->

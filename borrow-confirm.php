@@ -21,7 +21,7 @@
 <body class='bg-info bg-opacity-10 h-100'>
 
     <nav class="navbar navbar-light bg-info bg-opacity-50 px-5" style="border-radius: 0px 0px 20px 20px; box-shadow: 5px 7px 8px -1px rgba(0, 0, 0, 0.25);">
-        <a class="navbar-brand fs-3 fw-bolder" href="index.php">
+        <a class="navbar-brand fs-3 fw-bolder" href="menu.php">
             <img src="https://i.pinimg.com/originals/8c/1b/1a/8c1b1aeaa47f60548eb0e5c3ddf4ff17.png" alt="logo" width="60" height="70">
             <span class='align-middle'>
                 WU BOOK
