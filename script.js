@@ -7,15 +7,6 @@ var ary_save = []
 
 ary = [
     {
-        "username": "aeioustop",
-        "password": "player456",
-        "email": "mora_zhongli_0@gmail.com",
-        "name": "Omaewa moushindeiru",
-        "phone": "0941112345",
-        "address": "wiui 62/274",
-        "gender": "man"
-    },
-    {
         "username": "test",
         "password": "test",
         "email": "Jagun2588@gmail.com",
