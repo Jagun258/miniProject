@@ -37,27 +37,27 @@
         <p class="fw-bolder fs-1">บันทึกการคืนหนังสือ</p>
 
         <div class="row">
-            <div class="col-9">
+            <div class="col-md-9">
                 <div class="row left-top box" style="margin-bottom: 50px;padding-bottom: 0px;">
-                    <div class="col">
+                    <div class="col-lg-5">
                         <div class="row mt-3">
-                            <label for="id_customer" class="col-5 fs-5 my-auto">
+                            <label for="id_customer" class="col-lg-5 fs-5 my-auto">
                                 <b>รหัสสมาชิก:</b>
                             </label>
-                            <div class="col">
+                            <div class="col-lg">
                                 <input type="number" class="form-control" id="id_customer" required>
                             </div>
                         </div>
                         <div class="row">
-                            <label for="id_book" class="my-auto col-5 fs-5">
+                            <label for="id_book" class="my-auto col-lg-5 fs-5">
                                 <b>รหัสหนังสือ:</b>
                             </label>
-                            <div class="col">
+                            <div class="col-lg">
                                 <input type="text" class="form-control" id="id_book" maxlength="20" required>
                             </div>
                         </div>
                     </div>
-                    <div class="col-2 my-auto">
+                    <div class="col-lg-2 col-4 my-auto">
                         <button type="button" id='search_btn' onclick="searchValue()" class="btn fw-bolder" style="background-color: #086FA1;color: white">ค้นหา
                             <img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-29.png" style='-webkit-transform: scaleX(-1);
                             transform: scaleX(-1);' alt="search" width="20%" height="%"></button>
@@ -77,8 +77,8 @@
                             ประวัติการ ยืม หนังสือ
                         </div>
                         <div class="row">
-                            <div class="col"></div>
-                            <div class="col">
+                            <div class="col-md"></div>
+                            <div class="col-md-6 col-lg-4">
                                 <button type="button" class="btn btn-outline-dark mt-3 w-50 fs-5 fw-bolder" id="history" data-bs-toggle="modal" data-bs-target="#popup_history">
                                     ประวัติ
                                     <img src="https://cdn-icons-png.flaticon.com/512/565/565526.png" alt="history" width="20%" class="pb-1" />
@@ -114,13 +114,13 @@
                                 </div>
 
                             </div>
-                            <div class="col"></div>
+                            <div class="col-md"></div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md">
                 <img src="https://i.pinimg.com/736x/8b/08/ed/8b08ed0cb7a60f9372a160fcbacb47b1.jpg" alt="profile">
                 <div class="fs-4 fw-bolder mt-3" id="username-show"></div>
             </div>
@@ -128,22 +128,22 @@
         <div class="row">
             <div class="col" style="background-color: #D7E8FF;">
                 <div class="row p-3">
-                    <div class="col fs-5 fw-bolder">
+                    <div class="col-lg fs-5 fw-bolder">
                         ชื่อหนังสือ
                     </div>
-                    <div class="col fs-6" id='book_name'>
+                    <div class="col-lg fs-6" id='book_name'>
                         ...
                     </div>
-                    <div class="col fs-5 fw-bolder">
+                    <div class="col-lg fs-5 fw-bolder">
                         วันที่ยืม
                     </div>
-                    <div class="col fs-6" id='borrow_date'>
+                    <div class="col-lg fs-6" id='borrow_date'>
                         ...
                     </div>
-                    <div class="col fs-5 fw-bolder">
+                    <div class="col-lg fs-5 fw-bolder">
                         วันที่คืน
                     </div>
-                    <div class="col fs-6" id='return_date'>
+                    <div class="col-lg fs-6" id='return_date'>
                         ----
                     </div>
                 </div>
@@ -156,7 +156,7 @@
         <div class=" bg-info bg-opacity-50 text-center" style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
             height: 100px;">
             <div class="fs-1 p-4">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div class="d-grid gap-2 d-md-flex d-flex justify-content-end">
                     <button class="btn btn-dark footer_btn fs-5" type="button" id="back_btn" onclick="window.location.href='menu.php'">
                         << Back</button>
                             <button class="btn btn-success me-md-2 footer_btn fs-5" type="button" id="ok_btn" onclick="nextPage()">ยืนยัน</button>

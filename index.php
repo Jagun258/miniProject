@@ -33,24 +33,18 @@
     }
 
     button[type=button] {
-        width: 226px;
-        height: 60px;
-        font-size: 36px;
+        font-size: 20px;
         border-radius: 25px;
         text-align: center;
-        margin-left: 55px;
         background-color: white;
         color: black;
         border: solid black 3px
     }
 
     button[type=register] {
-        width: 226px;
-        height: 60px;
-        font-size: 36px;
+        font-size: 20px;
         border-radius: 25px;
         text-align: center;
-        margin-left: 55px;
         background-color: white;
         color: black;
         border: solid black 3px
@@ -102,25 +96,35 @@
     <!--  -->
     <div class="container" style="width: 60%;">
         <div class="login_area">
-            <div class='fs-1 fw-bolder' style="margin-left: 41px;margin-top: 22px;">Login</div>
-            <form action="" style="margin-left:85px; margin-right: 111px;" method="post">
-                <div class="form-group">
-                    <label for="username_customer"></label>
-                    <input type="text" class="form-control text-center border-dark fs-2" id="username_customer"
-                        placeholder="Username:" required>
+            <div class="row">
+                <div class='fs-1 fw-bolder' style="margin-left: 41px;margin-top: 22px;">Login</div>
+            </div>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-xl-8 col-8 d-grid gap-2 mx-auto">
+                        <div class="form-group">
+                            <label for="username_customer"></label>
+                            <input type="text" class="form-control text-center border-dark fs-4" id="username_customer"
+                                placeholder="Username:" required>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="username_customer"></label>
-                    <input type="password" class="form-control text-center border-dark fs-2" id="password_customer"
-                        placeholder="Password:" required>
+                <div class="row">
+                    <div class="col-xl-8 col-8 d-grid gap-2 mx-auto">
+                        <div class="form-group">
+                            <label for="username_customer"></label>
+                            <input type="password" class="form-control text-center border-dark fs-4" id="password_customer"
+                                placeholder="Password:" required>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row my-3">
-                    <div class="col">
+                <div class="row my-x-3 ">
+                    <div class="col-xl-4 col-sm-5 col-4 d-grid gap-2 mx-auto my-3 ">
                         <button type="register" class="button1 fs-4" id="register_btn"><a
                                 href="register.php">สมัครสมาชิก</a></button>
                     </div>
-                    <div class="col">
+                    <div class="col-xl-4 col-sm-5 col-4 d-grid gap-2 mx-auto my-3">
                         <button type="button" class="button1 fs-4" id="login_btn" onClick="check()">Login</button>
                     </div>
                 </div>

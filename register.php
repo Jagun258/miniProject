@@ -50,7 +50,7 @@
         </div>
     </nav>
 
-    <div class="container bg-info bg-opacity-25 text-center my-5 " style='border-radius: 25px;'>
+    <div class="container bg-info bg-opacity-25 text-center my-5" style='border-radius: 25px;'>
 
         <form action="index.php" method="post">
             <div class="row">
@@ -62,26 +62,26 @@
             <div class="row">
                 <label for="id_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ID *</label>
                 <div class="col">
-                    <input type="number" class="form-control " id="id_customer"
+                    <input type="number" class="form-control " id="id_customer" placeholder="0123456"
                         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         onchange="check_now('id_customer')" maxlength="20" maxlength="20" required>
                     <div class='text-danger warning text-start ' id='id_customer_warning'>
                         *กรุณาระบุ ID สูงสุด 20 ตัวเลข (0-9)
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <div class="row">
                 <label for="username_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Username *</label>
                 <div class="col">
-                    <input type="text" class="form-control " id="username_customer"
+                    <input type="text" class="form-control " id="username_customer" placeholder="example123"
                         onchange="check_now('username_customer')" maxlength="20" required>
                     <div class='text-danger warning text-start' id='username_customer_warning'>
                         *กรุณาระบุ Username 6-20 ตัวษร (a-z, 0-9)
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <div class="row">
@@ -93,7 +93,7 @@
                         *กรุณาระบุ Password (a-z, 0-9, ไม่มีอักษรพิเศษ)
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <div class="row">
@@ -109,13 +109,13 @@
                         *Password ไม่ตรงกัน
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
             <div class="row">
                 <label for="email_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Email
                     *</label>
                 <div class="col">
-                    <input type="email" class="form-control" id="email_customer" onchange="check_email()"
+                    <input type="email" class="form-control" id="email_customer" onchange="check_email()" placeholder="example123@gmail.com"
                         maxlength="100" required>
                     <div class='text-danger warning text-start ' id='email_customer_warning'>
                         *กรุณาระบุ Email
@@ -124,27 +124,27 @@
                         *Email ไม่ถูกต้อง
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <div class="row">
                 <label for="name_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ชื่อ-นามสกุล
                     *</label>
                 <div class="col">
-                    <input type="text" class="form-control" id="name_customer" onchange="check_name()" maxlength="100"
+                    <input type="text" class="form-control" id="name_customer" onchange="check_name()" maxlength="100" placeholder="Firstname Lastname"
                         required>
                     <div class='text-danger warning text-start ' id='name_customer_warning'>
                         *กรุณาระบุชื่อ-นามสกุล
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <div class="row">
-                <label for="phone_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เบอร์โทร
+                <label for="phone_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เบอร์โทร 
                     *</label>
                 <div class="col">
-                    <input type="tel" class="form-control" id="phone_customer" onchange="check_phone()" maxlength="10"
+                    <input type="tel" class="form-control" id="phone_customer" onchange="check_phone()" maxlength="10" placeholder="0123456789"
                         required>
                     <div class='text-danger warning text-start ' id='phone_customer_warning'>
                         *กรุณาระบุเบอร์โทรศัพท์
@@ -153,20 +153,20 @@
                         *เบอร์โทรศัพท์ไม่ถูกต้อง
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <div class="row">
                 <label for="address_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ที่อยู่
                     *</label>
                 <div class="col">
-                    <textarea type="tel" class="form-control" id="address_customer"
+                    <textarea type="tel" class="form-control" id="address_customer" placeholder="address"
                         onchange="check_now('address_customer')" required></textarea>
                     <div class='text-danger warning text-start ' id='address_customer_warning'>
                         *กรุณาระบุที่อยู่
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <div class="row">
@@ -178,7 +178,7 @@
                     <input class="form-check-input mt-2" type="radio" id="woman" name='gender_customer' value="woman"
                         required><span class='fs-5'>หญิง</span>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4 col-sm-2"></div>
             </div>
 
             <button type="cancel" class="btn btn-danger" id='cancel'><a href="index.php" class='fw-bolder'

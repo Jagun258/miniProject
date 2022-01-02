@@ -49,7 +49,7 @@
 
         </div>
         <!--  -->
-        <div class="row mx-auto fs-1 p-4">
+        <div class="row mx-auto fs-1 p-4 pt-5 pb-5">
             <div class="justify-content-md-end">
                 <button class="btn btn-danger footer_btn fs-5" type="button" id="cancel_btn" onclick="window.location.href='book-return.php'">
                     ยกเลิก</button>
@@ -59,8 +59,8 @@
     </div>
     <!-- --------------------- -->
 
-    <footer class='footer mt-auto' style="display: block;">
-        <div class="bg-info bg-opacity-50 text-center " style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
+    <footer class='mt-5 pt-5' style="display: block;">
+        <div class="bg-info bg-opacity-50 text-center" style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
             height: 100px;">
         </div>
     </footer>

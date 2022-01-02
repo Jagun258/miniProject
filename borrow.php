@@ -60,17 +60,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 my-auto">
+                    <div class="col-md-3 my-md-auto mb-3">
                         <button type="button" class="btn fw-bolder" id='search_btn' onclick="borrowRecord()" style="background-color: #086FA1;color: white">บันทึก</button>
                     </div>
                 </div>
 
                 <div class="row left-bottom box">
                     <div class="row">
-                        <div class="fs-4 text-start fw-bolder ps-5 pt-3">
+                        <div class="fs-4 text-start fw-bolder ps-5 pt-3 pb-3">
                             ข้อมูลหนังสือ
                         </div>
-                        <div class="col my-auto">
+                        <div class="col-lg my-lg-auto my-0">
                             <div class="row">
                                 <label for="id_book_value" class="my-auto col-5 px-0">
                                     <b>รหัสหนังสือ:</b>
@@ -97,7 +97,7 @@
                             </div>
 
                         </div>
-                        <div class="col">
+                        <div class="col-lg">
                             <div class="row">
                                 <label for="pub_book" class="my-auto col-5 px-0">
                                     <b>สำหนังพิมพ์:</b>
@@ -136,16 +136,14 @@
 
                 </div>
             </div>
-            <div class="col">
+            <div class="col text-sm-center">
                 <div class="row right-top" style="margin-bottom: 50px;">
-                    <div class="col"></div>
-                    <label for="borrowed_date_dd" class="my-auto col-sm-3 fs-5 text-end">
+                    <label for="borrowed_date_dd" class="text-sm-center col-lg-3 col-md-12 fs-5">
                         <b>วันที่ยืม: </b>
                     </label>
-                    <div class="col-4">
+                    <div class="col-lg-6">
                         <input type="date" class="form-control" id="borrowed_date_dd" required>
                     </div>
-                    <div class="col-3"></div>
                 </div>
 
                 <div class="row right-bottom box ms-3 pb-0">
@@ -173,7 +171,7 @@
         <div class=" bg-info bg-opacity-50 text-center" style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
             height: 100px;">
             <div class="fs-1 p-4">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div class="d-grid gap-2 d-md-flex d-flex justify-content-end">
                     <button class="btn btn-dark footer_btn fs-5" type="button" id="back_btn" onclick="window.location.href='menu.php'">
                         << Back</button>
                             <button class="btn btn-success me-md-2 footer_btn fs-5" type="button" id="ok_btn_borrow" onclick="ok_btn_borrow()">ยืนยัน</button>

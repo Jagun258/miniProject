@@ -75,13 +75,13 @@
         <h1><b>ค้นหาหนังสือภายในห้องสมุด</b></h1><br />
         <div class="container">
             <div class="row">
-                <div class="col-7 bg0 ">
+                <div class="col-lg-7 bg0 ">
                     <form action="">
                         <div class="mb row">
                             <label for="keyword_search" class="col-sm-3 col-form-label">
                                 <b>ข้อมูลที่ต้องการค้นหา :</b>
                             </label>
-                            <div class="col-sm">
+                            <div class="col">
                                 <input type="text" class="form-control" id="keyword_search" placeholder="Keyword"
                                     maxlength="20" onchange="checkKeyword()" required>
                             </div>
@@ -186,8 +186,7 @@
                     </form>
                 </div>
                 <!--  -->
-                <!--  -->
-                <div class="col-4 ms-5 bg1 carousel slide">
+                <div class="col-lg-4 ms-lg-5 my-lg-0 my-3 bg1 carousel slide">
                     <div id="carouselExampleControls" class="carousel" data-bs-touch="false" data-bs-interval="false">
                         <div class="carousel-inner ">
                             <div class="carousel-item active ">
@@ -289,7 +288,7 @@
         <div class="bg-info bg-opacity-50 text-center" style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
             height: 100px;">
             <div class="fs-1 p-4">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div class="d-grid gap-2 d-md-flex d-flex justify-content-end">
                     <button class="btn btn-dark footer_btn fs-5" type="button" id="back_btn"
                         onclick="window.location.href='menu.php'">
                         << Back</button>
@@ -305,12 +304,12 @@
 <script>
 
     saveValue = () => {
-        var checked_val=$('input[name=type_book]:checked').val()
+        var checked_val = $('input[name=type_book]:checked').val()
         $('#keyword-value').text($('#keyword_search').val())
         $('#search-from-value').text($('#search_form_dd').val())
         $('#type-book-value').text($('input[name=type_book]:checked').val())
         $('#area-book').empty()
-        if(checked_val===undefined){
+        if (checked_val === undefined) {
             switch ($('#search_form_dd').val()) {
                 case "ชื่อหนังสือ":
                     $.each(data_book, (item, value) => {
@@ -410,15 +409,15 @@
                             }
                         })
                     }
-    
+
             }
-        }else{
+        } else {
             switch ($('#search_form_dd').val()) {
                 case "ชื่อหนังสือ":
                     $.each(data_book, (item, value) => {
                         var result = data_book[item]["title"].includes($('#keyword_search').val())
                         var result_type = data_book[item]["type"].includes(checked_val)
-                        if (result&&result_type) {
+                        if (result && result_type) {
                             var line = ""
                             line += "<div class='col-3 mb-3'>"
                             line += "<div class='card' id='daCard'>"
@@ -440,10 +439,10 @@
                     }
                     break
                 case "ชื่อผู้แต่ง":
-                $.each(data_book, (item, value) => {
+                    $.each(data_book, (item, value) => {
                         var result = data_book[item]["author"].includes($('#keyword_search').val())
                         var result_type = data_book[item]["type"].includes(checked_val)
-                        if (result&&result_type) {
+                        if (result && result_type) {
                             var line = ""
                             line += "<div class='col-3 mb-3'>"
                             line += "<div class='card' id='daCard'>"
@@ -465,10 +464,10 @@
                     }
                     break
                 case "สำนักพิมพ์":
-                $.each(data_book, (item, value) => {
+                    $.each(data_book, (item, value) => {
                         var result = data_book[item]["publisher"].includes($('#keyword_search').val())
                         var result_type = data_book[item]["type"].includes(checked_val)
-                        if (result&&result_type) {
+                        if (result && result_type) {
                             var line = ""
                             line += "<div class='col-3 mb-3'>"
                             line += "<div class='card' id='daCard'>"
@@ -515,7 +514,7 @@
                             }
                         })
                     }
-    
+
             }
         }
     }
