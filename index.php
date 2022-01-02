@@ -114,7 +114,7 @@
                         <div class="form-group">
                             <label for="username_customer"></label>
                             <input type="password" class="form-control text-center border-dark fs-4" id="password_customer"
-                                placeholder="Password:" required>
+                                placeholder="Password:" maxLength="20" required>
                         </div>
                     </div>
                 </div>

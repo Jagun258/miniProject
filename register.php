@@ -78,7 +78,7 @@
                     <input type="text" class="form-control " id="username_customer" placeholder="example123"
                         onchange="check_now('username_customer')" maxlength="20" required>
                     <div class='text-danger warning text-start' id='username_customer_warning'>
-                        *กรุณาระบุ Username 6-20 ตัวษร (a-z, 0-9)
+                        *กรุณาระบุ Username 6-20 ตัวอักษร (a-z, 0-9)
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-2"></div>
@@ -88,9 +88,9 @@
                 <label for="password_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Password *</label>
                 <div class="col">
                     <input type="password" class="form-control" id="password_customer" onchange="check_password()"
-                        maxlength="100" required>
+                        maxlength="20" required>
                     <div class='text-danger warning text-start ' id='password_customer_warning'>
-                        *กรุณาระบุ Password (a-z, 0-9, ไม่มีอักษรพิเศษ)
+                        *กรุณาระบุ Password (a-z, 0-9, ไม่มีอักษรพิเศษ) ไม่เกิน 20 ตัวอักษร
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-2"></div>
@@ -101,9 +101,9 @@
                     *</label>
                 <div class="col">
                     <input type="password" class="form-control" id="cf_password_customer" onchange="check_password()"
-                        maxlength="100" required>
+                        maxLength="20" required>
                     <div class='text-danger warning text-start ' id='cf_password_customer_warning'>
-                        *กรุณาระบุ Password
+                        *กรุณาระบุ Confirm Password
                     </div>
                     <div class='text-danger warning text-start ' id='notmatch'>
                         *Password ไม่ตรงกัน
