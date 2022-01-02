@@ -133,13 +133,10 @@ function check() {
             if ((user == ary[item]['username']) && (password == ary[item]['password'])) {
                 location.href = 'menu.php';
                 return false
-            }
-
-            if ((user == sessionStorage.getItem("username") && (password == sessionStorage.getItem("password")))) {
+            }else if ((user == sessionStorage.getItem("username") && (password == sessionStorage.getItem("password")))) {
                 location.href = 'menu.php';
                 return false
-            }
-            else {
+            }else {
                 alert('* Username and password ไม่ถูกต้อง')
                 return false
             }
