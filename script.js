@@ -1,6 +1,6 @@
 $(() => {
     $('#confirm_btn').click(() => { confirm() })
-    $('#back_btn').click(() => { location.href = 'menu.html' })
+    $('#back_btn').click(() => { location.href = 'menu.php' })
 })
 
 var ary_save = []
@@ -132,12 +132,12 @@ function check() {
     } else {
         $.each(ary, (item, value) => {
             if ((user == ary[item]['username']) && (password == ary[item]['password'])) {
-                location.href = 'menu.html';
+                location.href = 'menu.php';
                 return false
             }
 
             if ((user == sessionStorage.getItem("username") && (password == sessionStorage.getItem("password")))) {
-                location.href = 'menu.html';
+                location.href = 'menu.php';
                 return false
             }
             else {
@@ -226,7 +226,7 @@ ok_btn_borrow = () => {
             sessionStorage.setItem('dateBorrow' + (item + 1), ary_save[item]["dateBorrow"])
             sessionStorage.setItem('status' + (item + 1), ary_save[item]["status"])
         })
-        window.location.href = 'borrow-confirm.html'
+        window.location.href = 'borrow-confirm.php'
     }
 
 }
@@ -240,6 +240,6 @@ clear_borrow = () => {
             sessionStorage.removeItem('dateBorrow' + a)
             sessionStorage.removeItem('status' + a)
         }
-        window.location.href = 'borrow.html'
+        window.location.href = 'borrow.php'
     }
 }
