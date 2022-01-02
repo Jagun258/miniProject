@@ -120,8 +120,8 @@ confirm = () => {
 }
 
 function check() {
-    var user = document.getElementById('username_customer').value();
-    var password = document.getElementById('password_customer').value();
+    var user = document.getElementById('username_customer').value;
+    var password = document.getElementById('password_customer').value;
     if (user == "" || password == "") {
         alert("กรุณากรอกข้อมูล");
     }
