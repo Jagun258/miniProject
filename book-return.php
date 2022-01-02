@@ -41,11 +41,11 @@
                 <div class="row left-top box" style="margin-bottom: 50px;padding-bottom: 0px;">
                     <div class="col-lg-5">
                         <div class="row mt-3">
-                            <label for="id_customer" maxlength="20" class="col-lg-5 fs-5 my-auto">
+                            <label for="id_customer" class="col-lg-5 fs-5 my-auto">
                                 <b>รหัสสมาชิก:</b>
                             </label>
                             <div class="col-lg">
-                                <input type="number" class="form-control" id="id_customer" required>
+                                <input type="number" class="form-control" id="id_customer" maxlength="20" required>
                             </div>
                         </div>
                         <div class="row">
