@@ -291,10 +291,10 @@
             <div class="fs-1 p-4">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button class="btn btn-dark footer_btn fs-5" type="button" id="back_btn"
-                        onclick="window.location.href='menu.html'">
+                        onclick="window.location.href='menu.php'">
                         << Back</button>
                             <button class="btn btn-success me-md-2 footer_btn fs-5" type="button" id="ok_btn"
-                                onclick="window.location.href='borrow.html'">ยืม</button>
+                                onclick="window.location.href='borrow.php'">ยืม</button>
                 </div>
             </div>
         </div>
