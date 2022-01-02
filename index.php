@@ -27,7 +27,7 @@
         border: solid black 1px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 30px;
+        margin-top: 68px;
         margin-bottom: 63px;
         border-radius: 50px;
     }
