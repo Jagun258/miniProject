@@ -105,7 +105,7 @@
                         <div class="form-group">
                             <label for="username_customer"></label>
                             <input type="text" class="form-control text-center border-dark fs-4" id="username_customer"
-                                placeholder="Username:" required>
+                                placeholder="Username:" maxLength="20" required>
                         </div>
                     </div>
                 </div>
