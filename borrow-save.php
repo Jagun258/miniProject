@@ -24,50 +24,53 @@
 
 <body class='bg-info bg-opacity-10'>
 
-    <nav class="navbar navbar-light bg-info bg-opacity-50"
+    <nav class="navbar navbar-light bg-info bg-opacity-50 px-5"
         style="border-radius: 0px 0px 20px 20px; box-shadow: 5px 7px 8px -1px rgba(0, 0, 0, 0.25);">
-        <div class="container px-0">
-            <span>
-                <img src="https://i.pinimg.com/originals/8c/1b/1a/8c1b1aeaa47f60548eb0e5c3ddf4ff17.png" alt="logo"
-                    width="60" height="70">
-                <span class='fs-3 align-middle rounded-bottom fw-bolder'>WU BOOK</span>
+        <a class="navbar-brand fs-3 fw-bolder" href="#">
+            <img src="https://i.pinimg.com/originals/8c/1b/1a/8c1b1aeaa47f60548eb0e5c3ddf4ff17.png" alt="logo"
+                width="60" height="70">
+            <span class='align-middle'>
+                WU BOOK
             </span>
-        </div>
+        </a>
+        <img src="https://i.pinimg.com/736x/8b/08/ed/8b08ed0cb7a60f9372a160fcbacb47b1.jpg" alt="profile" style="width: 80px;
+        height: 80px;">
     </nav>
 
     <!--  -->
     <div class="container text-center my-5 " style='border-radius: 25px;'>
-        <img src="https://i.pinimg.com/736x/8b/08/ed/8b08ed0cb7a60f9372a160fcbacb47b1.jpg" alt="profile">
-        <div class="fs-2 mb-4" id='username_customer'></div>
+
         <div class="row">
-            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='search.php'">
-                ค้นหาหนังสือ </button>
+            <div class="col mx-auto">
+                <img src="https://cdn-icons-png.flaticon.com/512/1442/1442912.png" alt="correct" width="15%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="fs-1 fw-bolder my-3">
+                    ทำรายการยืมสำเร็จ
+                </div>
+            </div>
         </div>
         <div class="row">
-            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='borrow.php'">
-                บันทึกการยืมหนังสือ </button>
-        </div>
-        <div class="row">
-            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='book-return.php'">
-                บันทึกการคืนหนังสือ </button>
+            <button class="btn btn-dark footer_btn fs-5 mx-auto" type="button" id="back_btn"
+                onclick="window.location.href='menu.php'">
+                << Back</button>
         </div>
     </div>
     <!-- --------------------- -->
-
-    <footer>
-        <div class="bg-info bg-opacity-50" style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
+    <footer class='footer mt-auto' style="display: block;">
+        <div class="bg-info bg-opacity-50 text-center " style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
             height: 100px;">
         </div>
     </footer>
+
 
 </body>
 
 <script>
 
-
-    $(() => {
-        $('#username_customer').text(sessionStorage.getItem("username"))
-    })
 </script>
 
 </html>

@@ -32,7 +32,7 @@
         border-radius: 50px;
     }
 
-    button[type=submit] {
+    button[type=button] {
         width: 226px;
         height: 60px;
         font-size: 36px;
@@ -99,7 +99,7 @@
         </div>
     </nav>
 
-    <!-- แก้ไขตรงนี้ -->
+    <!--  -->
     <div class="container" style="width: 60%;">
         <div class="login_area">
             <div class='fs-1 fw-bolder' style="margin-left: 41px;margin-top: 22px;">Login</div>
@@ -121,7 +121,7 @@
                                 href="register.php">สมัครสมาชิก</a></button>
                     </div>
                     <div class="col">
-                        <button type="submit" class="button1 fs-4" id="login_btn" onClick="check()">Login</button>
+                        <button type="button" class="button1 fs-4" id="login_btn" onClick="check()">Login</button>
                     </div>
                 </div>
             </form>

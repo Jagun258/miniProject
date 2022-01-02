@@ -52,19 +52,32 @@
 
     <div class="container bg-info bg-opacity-25 text-center my-5 " style='border-radius: 25px;'>
 
-        <form action="index.html" method="post">
+        <form action="index.php" method="post">
             <div class="row">
-                <div class="fs-2 text-start fw-bolder ps-5 pt-3">
+                <div class="fs-2 text-start fw-bolder  pt-3">
                     สมัครสมาชิก
                 </div>
             </div>
 
             <div class="row">
+                <label for="id_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ID *</label>
+                <div class="col">
+                    <input type="number" class="form-control " id="id_customer"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        onchange="check_now('id_customer')" maxlength="20" maxlength="20" required>
+                    <div class='text-danger warning text-start ' id='id_customer_warning'>
+                        *กรุณาระบุ ID สูงสุด 20 ตัวเลข (0-9)
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            <div class="row">
                 <label for="username_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Username *</label>
                 <div class="col">
-                    <input type="text" class="form-control ms-5" id="username_customer"
+                    <input type="text" class="form-control " id="username_customer"
                         onchange="check_now('username_customer')" maxlength="20" required>
-                    <div class='text-danger warning text-start ps-5' id='username_customer_warning'>
+                    <div class='text-danger warning text-start' id='username_customer_warning'>
                         *กรุณาระบุ Username 6-20 ตัวษร (a-z, 0-9)
                     </div>
                 </div>
@@ -74,9 +87,9 @@
             <div class="row">
                 <label for="password_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Password *</label>
                 <div class="col">
-                    <input type="password" class="form-control ms-5" id="password_customer" onchange="check_password()"
+                    <input type="password" class="form-control" id="password_customer" onchange="check_password()"
                         maxlength="100" required>
-                    <div class='text-danger warning text-start ps-5' id='password_customer_warning'>
+                    <div class='text-danger warning text-start ' id='password_customer_warning'>
                         *กรุณาระบุ Password (a-z, 0-9, ไม่มีอักษรพิเศษ)
                     </div>
                 </div>
@@ -87,12 +100,12 @@
                 <label for="cf_password_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Confirm password
                     *</label>
                 <div class="col">
-                    <input type="password" class="form-control ms-5" id="cf_password_customer"
-                        onchange="check_password()" maxlength="100" required>
-                    <div class='text-danger warning text-start ps-5' id='cf_password_customer_warning'>
+                    <input type="password" class="form-control" id="cf_password_customer" onchange="check_password()"
+                        maxlength="100" required>
+                    <div class='text-danger warning text-start ' id='cf_password_customer_warning'>
                         *กรุณาระบุ Password
                     </div>
-                    <div class='text-danger warning text-start ps-5' id='notmatch'>
+                    <div class='text-danger warning text-start ' id='notmatch'>
                         *Password ไม่ตรงกัน
                     </div>
                 </div>
@@ -102,12 +115,12 @@
                 <label for="email_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Email
                     *</label>
                 <div class="col">
-                    <input type="email" class="form-control ms-5" id="email_customer" onchange="check_email()"
+                    <input type="email" class="form-control" id="email_customer" onchange="check_email()"
                         maxlength="100" required>
-                    <div class='text-danger warning text-start ps-5' id='email_customer_warning'>
+                    <div class='text-danger warning text-start ' id='email_customer_warning'>
                         *กรุณาระบุ Email
                     </div>
-                    <div class='text-danger warning text-start ps-5' id='email_not_correct'>
+                    <div class='text-danger warning text-start ' id='email_not_correct'>
                         *Email ไม่ถูกต้อง
                     </div>
                 </div>
@@ -118,9 +131,9 @@
                 <label for="name_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ชื่อ-นามสกุล
                     *</label>
                 <div class="col">
-                    <input type="text" class="form-control ms-5" id="name_customer" onchange="check_name()"
-                        maxlength="100" required>
-                    <div class='text-danger warning text-start ps-5' id='name_customer_warning'>
+                    <input type="text" class="form-control" id="name_customer" onchange="check_name()" maxlength="100"
+                        required>
+                    <div class='text-danger warning text-start ' id='name_customer_warning'>
                         *กรุณาระบุชื่อ-นามสกุล
                     </div>
                 </div>
@@ -131,12 +144,12 @@
                 <label for="phone_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เบอร์โทร
                     *</label>
                 <div class="col">
-                    <input type="tel" class="form-control ms-5" id="phone_customer" onchange="check_phone()"
-                        maxlength="10" required>
-                    <div class='text-danger warning text-start ps-5' id='phone_customer_warning'>
+                    <input type="tel" class="form-control" id="phone_customer" onchange="check_phone()" maxlength="10"
+                        required>
+                    <div class='text-danger warning text-start ' id='phone_customer_warning'>
                         *กรุณาระบุเบอร์โทรศัพท์
                     </div>
-                    <div class='text-danger warning text-start ps-5' id='phone_customer_not_correct'>
+                    <div class='text-danger warning text-start ' id='phone_customer_not_correct'>
                         *เบอร์โทรศัพท์ไม่ถูกต้อง
                     </div>
                 </div>
@@ -147,9 +160,9 @@
                 <label for="address_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ที่อยู่
                     *</label>
                 <div class="col">
-                    <textarea type="tel" class="form-control ms-5" id="address_customer"
+                    <textarea type="tel" class="form-control" id="address_customer"
                         onchange="check_now('address_customer')" required></textarea>
-                    <div class='text-danger warning text-start ps-5' id='address_customer_warning'>
+                    <div class='text-danger warning text-start ' id='address_customer_warning'>
                         *กรุณาระบุที่อยู่
                     </div>
                 </div>
@@ -159,16 +172,16 @@
             <div class="row">
                 <label for="address_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เพศ
                     *</label>
-                <div class="col pt-1">
-                    <input class="form-check-input mt-2" type="radio" id="man" name='gender_customer' value="man" required><span
-                        class="fs-5 me-5">ชาย</span>
-                    <input class="form-check-input mt-2" type="radio" id="woman" name='gender_customer'
-                        value="woman" required><span class='fs-5'>หญิง</span>
+                <div class="col pt-1 mx-auto">
+                    <input class="form-check-input mt-2" type="radio" id="man" name='gender_customer' value="man"
+                        required><span class="fs-5 me-5">ชาย</span>
+                    <input class="form-check-input mt-2" type="radio" id="woman" name='gender_customer' value="woman"
+                        required><span class='fs-5'>หญิง</span>
                 </div>
                 <div class="col-4"></div>
             </div>
 
-            <button type="cancel" class="btn btn-danger" id='cancel'><a href="index.html" class='fw-bolder'
+            <button type="cancel" class="btn btn-danger" id='cancel'><a href="index.php" class='fw-bolder'
                     style="color:white">ยกเลิกการสมัคร</a></button>
             <input type="submit" class="btn btn-success fw-bolder" style='color:white' id='confirm_btn'
                 value='ยืนยันการสมัคร'>
@@ -194,23 +207,29 @@
         if (cfpass.length != 0) {
             if (pass != cfpass) {
                 $('#notmatch').show()
+                $('#cf_password_customer').attr('class', 'form-control border-danger')
             }
             else {
+                $('#cf_password_customer').attr('class', 'form-control border-success')
                 $('#notmatch').hide()
             }
         } else {
             if (pass.length == 0) {
                 $('#password_customer_warning').show()
+                $('#password_customer').attr('class', 'form-control border-danger')
             } else {
                 $('#password_customer_warning').hide()
+                $('#password_customer').attr('class', 'form-control border-success')
             }
         }
         if (!(pass.match(/^[A-Za-z0-9]+$/))) {
             $('#password_customer_warning').show()
+            $('#password_customer').attr('class', 'form-control border-danger')
         } else {
+            $('#password_customer').attr('class', 'form-control border-success')
             $('#password_customer_warning').hide()
         }
-
+        trueonoff()
     }
 
 
@@ -218,57 +237,70 @@
         if (((($('#' + thisId).val()).length) == 0) || (($('#' + thisId).val()).length) < 6) {
 
             $('#' + thisId + '_warning').show();
-            $('#' + thisId).attr('class', 'form-control ms-5 border-danger');
+            $('#' + thisId).attr('class', 'form-control border-danger');
 
         } if (!($('#' + thisId).val()).match(/^[A-Za-z0-9]+$/)) {
             $('#' + thisId + '_warning').show();
-            $('#' + thisId).attr('class', 'form-control ms-5 border-danger');
+            $('#' + thisId).attr('class', 'form-control border-danger');
         } else {
             $('#' + thisId + '_warning').hide();
-            $('#' + thisId).attr('class', 'form-control ms-5 border-success');
+            $('#' + thisId).attr('class', 'form-control border-success');
         }
+        trueonoff()
     }
 
     check_name = () => {
         if ((($('#name_customer').val()).length) == 0) {
 
             $('#name_customer_warning').show();
-            $('#name_customer').attr('class', 'form-control ms-5 border-danger');
+            $('#name_customer').attr('class', 'form-control border-danger');
 
         } else {
             $('#name_customer_warning').hide();
-            $('#name_customer').attr('class', 'form-control ms-5 border-success');
+            $('#name_customer').attr('class', 'form-control border-success');
         }
+        trueonoff()
     }
 
-    // .match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
     check_email = () => {
         var email = $('#email_customer').val()
         if (!(email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/))) {
             $('#email_not_correct').show()
+            $('#email_customer').attr('class', 'form-control border-danger');
+
         } else {
             $('#email_not_correct').hide()
+            $('#email_customer').attr('class', 'form-control border-success');
         }
+        trueonoff()
     }
 
     check_phone = () => {
         var phone = $('#phone_customer').val();
-        if (phone.length != 10) {
-            if (!(phone.match(/[0-9]{10}/))) {
+        if ((phone.length != 10) || (!(phone.match(/[0-9]{10}/)))) {
+            if(phone.length==0){
+                $('#phone_customer_not_correct').hide()
+                $('#phone_customer_warning').show()
+                $('#phone_customer').attr('class', 'form-control border-danger');
+            }else{
                 $('#phone_customer_not_correct').show()
                 $('#phone_customer_warning').hide()
+                $('#phone_customer').attr('class', 'form-control border-danger');
             }
-            else {
-                $('#phone_customer_warning').show()
-                $('#phone_customer_not_correct').hide()
-            }
-        } else if (!(phone.match(/[0-9]{10}/))) {
-            $('#phone_customer_not_correct').show()
-            $('#phone_customer_warning').hide()
         }
         else {
             $('#phone_customer_not_correct').hide()
             $('#phone_customer_warning').hide()
+            $('#phone_customer').attr('class', 'form-control border-success');
+        }
+        trueonoff()
+    }
+
+    trueonoff = () => {
+        if ($('.warning').is(':visible')) {
+            $('#confirm_btn').prop('disabled', true)
+        } else {
+            $('#confirm_btn').prop('disabled', false)
         }
     }
 
