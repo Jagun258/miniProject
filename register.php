@@ -200,11 +200,11 @@
 <script>
 
     check_username = () => {
-        if (((($('#username_customer').val()).length) == 0) || (($('#' + thisId).val()).length) < 6) {
+        if (((($('#username_customer').val()).length) == 0) || (($('#username_customer').val()).length) < 6) {
             $('#username_customer_warning').show();
             $('#username_customer').attr('class', 'form-control border-danger');
 
-        } if (!($('#' + thisId).val()).match(/^[A-Za-z0-9]/)) {
+        } else if (!($('#username_customer').val()).match(/^[A-Za-z0-9]/)) {
             $('#username_customer_warning').show();
             $('#username_customer').attr('class', 'form-control border-danger');
         } else {
