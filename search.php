@@ -94,7 +94,7 @@
                                     </label>
                                     <div class="col-sm">
                                         <select class="form-select dropdown-toggle" id="search_form_dd" required>
-                                            <option value="-">เลือก</option>
+                                            <option value="ทั้งหมด">ทั้งหมด</option>
                                             <option id="search_form_title_btn" value="ชื่อหนังสือ">ชื่อหนังสือ
                                             </option>
                                             <option id="search_form_author_btn" value="ชื่อผู้แต่ง">ชื่อผู้แต่ง
@@ -178,6 +178,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="text-start pt-3 fw-bolder text-danger">*หมายเหตุ: กรุณา Copy ID
+                                    หนังสือที่จะยืม แล้วนำไปใส่ในหน้าถัดไป</div>
                             </div>
                         </div>
 
@@ -207,6 +209,9 @@
                                                 <img src="https://images-se-ed.com/ws/Storage/Originals/978616/810/9786168109151L.jpg?h=bb4b14e93f5d27dcb4bc011db6327b50"
                                                     class="d-block new w-100 h-100" alt="life_good"
                                                     style="cursor: default;">
+                                                <div class="fs-4 pt-3"><b>ID :</b> L0105558</div>
+                                                <div class="fs-4 pt-3"><b>Author :</b> James Wallman</div>
+                                                <div class="fs-4 pt-3"><b>Publisher :</b> บิงโก</div>
                                             </div>
                                             <div class="modal-footer">
                                             </div>
@@ -233,6 +238,10 @@
                                                 <img src="https://images-se-ed.com/ws/Storage/Originals/978616/083/9786160833979L.jpg?h=fbe3d12f62cbc6072361b4852981dee3"
                                                     class="d-block new w-100 h-100" alt="life_good"
                                                     style="cursor: default;">
+                                                <div class="fs-4 pt-3"><b>ID :</b> P0107410</div>
+                                                <div class="fs-4 pt-3"><b>Author :</b> บัญชา ปะสีละเตสัง</div>
+                                                <div class="fs-4 pt-3"><b>Publisher :</b> กรุงเทพฯ : ซีเอ็ดยูเคชั่น
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                             </div>
@@ -258,6 +267,9 @@
                                                 <img src="https://storage.naiin.com/system/application/bookstore/resource/product/201806/237375/1000208592_front_XXL.jpg?imgname=Blockchain-Technology-%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%94%E0%B8%B4%E0%B8%88%E0%B8%B4%E0%B8%97%E0%B8%B1%E0%B8%A5%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%9E%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%94%E0%B8%99"
                                                     class="d-block new w-75 h-75" alt="life_good"
                                                     style="cursor: default;">
+                                                <div class="fs-4 pt-3"><b>ID :</b> T0009959</div>
+                                                <div class="fs-4 pt-3"><b>Author :</b> GET SMART</div>
+                                                <div class="fs-4 pt-3"><b>Publisher :</b> -</div>
                                             </div>
                                             <div class="modal-footer">
                                             </div>
@@ -383,7 +395,7 @@
                         $('#area-book').append('<div class="text-center fs-4 fw-bolder">ไม่พบหนังสือที่ค้นหา</div>')
                     }
                     break
-                case "-":
+                case "ทั้งหมด":
                     if (($('#keyword_search').val()).length == 0) {
                         loadBook()
                     } else {

@@ -54,8 +54,8 @@ data_book = [
         "title": "ชีวิตดีเมื่อมีของน้อย ปรัชญาความสุข ฉบับ มินิมอล",
         "author": "James Wallman",
         "publisher": "บิงโก",
-        "pub_year": "",
-        "time_of_pub": "",
+        "pub_year": "-",
+        "time_of_pub": "-",
         "type": "book",
     },
     {
@@ -65,7 +65,7 @@ data_book = [
         "author": "บัญชา ปะสีละเตสัง",
         "publisher": "กรุงเทพฯ : ซีเอ็ดยูเคชั่น",
         "pub_year": "2562",
-        "time_of_pub": "",
+        "time_of_pub": "-",
         "type": "book",
     },
     {
@@ -73,7 +73,7 @@ data_book = [
         "id": "T0009959",
         "title": "Blockchain Technology ถนนสายใหม่เชื่อมโลกดิจิทัลไร้พรมแดน",
         "author": "GET SMART",
-        "publisher": "",
+        "publisher": "-",
         "pub_year": "2561",
         "time_of_pub": "",
         "type": "book",
