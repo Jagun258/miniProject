@@ -41,7 +41,7 @@
                 <div class="row left-top box" style="margin-bottom: 50px;padding-bottom: 0px;">
                     <div class="col-lg-5">
                         <div class="row mt-3">
-                            <label for="id_customer" class="col-lg-5 fs-5 my-auto">
+                            <label for="id_customer" maxlength="20" class="col-lg-5 fs-5 my-auto">
                                 <b>รหัสสมาชิก:</b>
                             </label>
                             <div class="col-lg">
