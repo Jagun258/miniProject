@@ -76,7 +76,7 @@
                 <label for="username_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Username *</label>
                 <div class="col">
                     <input type="text" class="form-control " id="username_customer" placeholder="example123"
-                        onchange="check_now('username_customer')" maxlength="20" required>
+                        onchange="check_username()" maxlength="20" required>
                     <div class='text-danger warning text-start' id='username_customer_warning'>
                         *กรุณาระบุ Username 6-20 ตัวอักษร (a-z, 0-9)
                     </div>
@@ -115,8 +115,8 @@
                 <label for="email_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">Email
                     *</label>
                 <div class="col">
-                    <input type="email" class="form-control" id="email_customer" onchange="check_email()" placeholder="example123@gmail.com"
-                        maxlength="100" required>
+                    <input type="email" class="form-control" id="email_customer" onchange="check_email()"
+                        placeholder="example123@gmail.com" maxlength="100" required>
                     <div class='text-danger warning text-start ' id='email_customer_warning'>
                         *กรุณาระบุ Email
                     </div>
@@ -131,8 +131,8 @@
                 <label for="name_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">ชื่อ-นามสกุล
                     *</label>
                 <div class="col">
-                    <input type="text" class="form-control" id="name_customer" onchange="check_name()" maxlength="100" placeholder="Firstname Lastname"
-                        required>
+                    <input type="text" class="form-control" id="name_customer" onchange="check_name()" maxlength="100"
+                        placeholder="Firstname Lastname" required>
                     <div class='text-danger warning text-start ' id='name_customer_warning'>
                         *กรุณาระบุชื่อ-นามสกุล
                     </div>
@@ -141,11 +141,11 @@
             </div>
 
             <div class="row">
-                <label for="phone_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เบอร์โทร 
+                <label for="phone_customer" class="form-label col-4 text-end mb-0 fs-5 pt-1">เบอร์โทร
                     *</label>
                 <div class="col">
-                    <input type="tel" class="form-control" id="phone_customer" onchange="check_phone()" maxlength="10" placeholder="0123456789"
-                        required>
+                    <input type="tel" class="form-control" id="phone_customer" onchange="check_phone()" maxlength="10"
+                        placeholder="0123456789" required>
                     <div class='text-danger warning text-start ' id='phone_customer_warning'>
                         *กรุณาระบุเบอร์โทรศัพท์
                     </div>
@@ -199,7 +199,20 @@
 
 <script>
 
+    check_username = () => {
+        if (((($('#username_customer').val()).length) == 0) || (($('#' + thisId).val()).length) < 6) {
+            $('#username_customer_warning').show();
+            $('#username_customer').attr('class', 'form-control border-danger');
 
+        } if (!($('#' + thisId).val()).match(/^[A-Za-z0-9]/)) {
+            $('#username_customer_warning').show();
+            $('#username_customer').attr('class', 'form-control border-danger');
+        } else {
+            $('#username_customer_warning').hide();
+            $('#username_customer').attr('class', 'form-control border-success');
+        }
+        trueonoff()
+    }
 
     check_password = () => {
         var pass = $('#password_customer').val()
@@ -278,11 +291,11 @@
     check_phone = () => {
         var phone = $('#phone_customer').val();
         if ((phone.length != 10) || (!(phone.match(/[0-9]{10}/)))) {
-            if(phone.length==0){
+            if (phone.length == 0) {
                 $('#phone_customer_not_correct').hide()
                 $('#phone_customer_warning').show()
                 $('#phone_customer').attr('class', 'form-control border-danger');
-            }else{
+            } else {
                 $('#phone_customer_not_correct').show()
                 $('#phone_customer_warning').hide()
                 $('#phone_customer').attr('class', 'form-control border-danger');
