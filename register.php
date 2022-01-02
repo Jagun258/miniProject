@@ -239,7 +239,7 @@
             $('#' + thisId + '_warning').show();
             $('#' + thisId).attr('class', 'form-control border-danger');
 
-        } if (!($('#' + thisId).val()).match(/^[A-Za-z0-9]+$/)) {
+        } if (!($('#' + thisId).val()).match(/^[A-Za-z0-9]/)) {
             $('#' + thisId + '_warning').show();
             $('#' + thisId).attr('class', 'form-control border-danger');
         } else {
