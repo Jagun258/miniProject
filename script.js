@@ -124,7 +124,6 @@ function check() {
     var password = document.getElementById('password_customer').value;
     if (user == "" || password == "") {
         alert("กรุณากรอกข้อมูล");
-        user.value = "";
     }
     else if (!(user.match(/^([a-z0-9])+$/i))) {
         alert("กรอกได้เฉพาะตัวเลขและตัวอักษรภาษาอังกฤษเท่านั้น");
@@ -136,7 +135,7 @@ function check() {
                 return false
             }
 
-            if ((user == sessionStorage.getItem("username") && (password == sessionStorage.getItem("password")))) {
+            esle if ((user == sessionStorage.getItem("username") && (password == sessionStorage.getItem("password")))) {
                 location.href = 'menu.php';
                 return false
             }
