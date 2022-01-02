@@ -27,7 +27,7 @@
         border: solid black 1px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 63px;
+        margin-top: 30px;
         margin-bottom: 63px;
         border-radius: 50px;
     }
@@ -101,7 +101,7 @@
             </div>
             <form action="" method="post">
                 <div class="row">
-                    <div class="col-xl-8 col-8 d-grid gap-2 mx-auto">
+                    <div class="col-xl-8 col-10 d-grid gap-2 mx-auto">
                         <div class="form-group">
                             <label for="username_customer"></label>
                             <input type="text" class="form-control text-center border-dark fs-4" id="username_customer"
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-8 col-8 d-grid gap-2 mx-auto">
+                    <div class="col-xl-8 col-10 d-grid gap-2 mx-auto mb-4">
                         <div class="form-group">
                             <label for="username_customer"></label>
                             <input type="password" class="form-control text-center border-dark fs-4" id="password_customer"
