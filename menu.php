@@ -57,7 +57,7 @@
     <footer>
         <div class="bg-info bg-opacity-50" style="border-radius: 20px 20px 0px 0px; box-shadow: 11px -1px 14px 4px rgba(0, 0, 0, 0.25);
             height: 100px;">
-            <button type="button" class="btn btn-dark mt-4 ms-5 fs-4" onclick="location.href='index.php'">Log Out</button>
+            <button type="button" class="btn btn-dark mt-4 ms-5 fs-4" onclick="location.href='index.php'" id="logout_btn">Log Out</button>
         </div>
     </footer>
 
