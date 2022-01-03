@@ -40,15 +40,15 @@
         <img src="https://i.pinimg.com/736x/8b/08/ed/8b08ed0cb7a60f9372a160fcbacb47b1.jpg" alt="profile">
         <div class="fs-2 mb-4" id='username_customer'></div>
         <div class="row">
-            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='search.php'">
+            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='search.php'" id="search_page_btn">
                 ค้นหาหนังสือ </button>
         </div>
         <div class="row">
-            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='borrow.php'">
+            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='borrow.php'" id="borrow_page_btn">
                 บันทึกการยืมหนังสือ </button>
         </div>
         <div class="row">
-            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='book-return.php'">
+            <button type="button" class="btn btn-menu fs-3 mx-auto" onclick="window.location.href='book-return.php'" id="return_page_btn">
                 บันทึกการคืนหนังสือ </button>
         </div>
     </div>
